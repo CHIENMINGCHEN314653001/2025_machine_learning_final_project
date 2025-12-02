@@ -39,7 +39,6 @@
 採用混合學習架構 (Hybrid Learning Architecture)，結合監督式學習(Supervised Learning)與強化學習(Reinforcement Learning)。
 
 <br></br>
-
 Ⅰ.監督式學習：物理特徵映射 這是一個函數近似問題，用於確保模擬的準確度。
 
 目的：讓 AI 學會看到樣子，就能預測觸感，其中模型定義：令 $$x$$ 為商品的多模態輸入（影像、材質標籤）， $$y$$ 為目標實體感官向量（如表面粗糙度、阻力曲線）。
@@ -169,16 +168,7 @@ plt.show()
 print(f"Final Loss: {losses[-1]:.6f}")
 ```
 
-<table>
-  <tr>
-    <td style="vertical-align: top;">
-      <img src="1.jpg" style="width: 400px; border: 1px solid #ccc; border-radius: 8px;">
-    </td>
-    <td style="vertical-align: top; padding-right: 20px;">
-        <img src="2.jpg" style="width: 400px; border: 1px solid #ccc; border-radius: 8px;">
-    </td>
-  </tr>
-</table>
+![figure](1.jpg)
 
 <br></br>
 Loss 曲線在訓練約 100 epochs 後迅速收斂，證明模型成功捕捉到了視覺特徵與觸覺參數之間的非線性關係。在結果圖中，紅色點（預測值）緊密跟隨藍色點（真實值）的趨勢，說明神經網路能夠過濾掉隨機雜訊，學會潛在的物理規則。
