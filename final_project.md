@@ -169,5 +169,22 @@ plt.show()
 print(f"Final Loss: {losses[-1]:.6f}")
 ```
 
+<table>
+  <tr>
+    <td style="vertical-align: top;">
+      <img src="1.jpg" style="width: 400px; border: 1px solid #ccc; border-radius: 8px;">
+    </td>
+    <td style="vertical-align: top; padding-right: 20px;">
+        <img src="2.jpg" style="width: 400px; border: 1px solid #ccc; border-radius: 8px;">
+    </td>
+  </tr>
+</table>
+
+<br></br>
+Loss 曲線在訓練約 100 epochs 後迅速收斂，證明模型成功捕捉到了視覺特徵與觸覺參數之間的非線性關係。在結果圖中，紅色點（預測值）緊密跟隨藍色點（真實值）的趨勢，說明神經網路能夠過濾掉隨機雜訊，學會潛在的物理規則。
+
+從這個簡化模型中學到，跨模態映射是可行的。然而，它也揭示了未來的困難點：真實世界的物理屬性遠比單一的摩擦係數複雜（包含溫度、硬度、彈性）。此外，目前的模型是靜態的情況，但未來的奈米微粒需要處理動態互動，這時就必須引入 Reinforcement Learning。
+
+
 
 此計畫需結合深度生成模型（Diffusion、VAE） 、多模態嵌入表示（Multimodal Embedding）、以及物理導向神經網路（PINN），以同時捕捉視覺與觸覺間的高維非線性關係，為未來可感知實體生成奠定基礎。
